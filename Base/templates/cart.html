@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<div class="flex justify-center mr-[950px] mb-[28px]">
+<span class="text-[24px] font-[600]">Savatingiz,</span>
+<span class="text-[24px] font-[600] text-[#7e818c] ml-[10px]">1 mahsulot</span>
+</div>
+<div class="flex justify-center mt-[14px]">
+<div class="w-[828px] h-[] border rounded-[10px] pl-[14px] ">
+    <div class="w-[796px] h-[55px] border-b flex pt-[15px] mb-[20px]">
+        <input class="w-[18px] h-[18px] bg-[#7f4dff] mt-[2px]" type="checkbox" value="">
+        <div class="text-[14px] w-[128px] h-[24px] ml-[15px]">Hammasini yechish</div>
+    </div>
+
+    {% for product in items %}
+    <div class=" border-b w-[796px] h-[303px] mb-[20px]">
+
+<span class="text-[12px] text-[#7e818c] ">Uzum Market yetkazib berishi</span>
+<div><span class="font-[600] text-[18px]">Ertaga yetkazib beramiz</span></div>
+
+<div class="flex mt-[13px]">
+<input class="w-[18px] h-[18px] bg-[#7f4dff] mt-[65px]" type="checkbox" value="">
+
+<img class="ml-[20px] w-[100px] h-[120px]" src="{{ product.item.rasm.url }}" width="100">
+
+<div>
+    <div class="flex"><h3 class="w-[532px] h-[24px] ml-[30px] ">{{ product.item.tavsifi }}</h3><svg data-v-10380025="" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="ui-icon text-[#4d4f59]  filled">
+<path class="text-[#4d4f59]" fill-rule="evenodd" clip-rule="evenodd" d="M9.75 3.5C9.33579 3.5 9 3.83579 9 4.25V5H15V4.25C15 3.83579 14.6642 3.5 14.25 3.5H9.75ZM7.5 4.25V5H3.75C3.33579 5 3 5.33579 3 5.75C3 6.16421 3.33579 6.5 3.75 6.5H4.30005L5.62088 19.9681C5.73386 21.1202 6.70255 21.9985 7.86014 21.9985H16.1399C17.2975 21.9985 18.2661 21.1202 18.3791 19.9681L19.7 6.5H20.25C20.6642 6.5 21 6.16421 21 5.75C21 5.33579 20.6642 5 20.25 5H16.5V4.25C16.5 3.00736 15.4926 2 14.25 2H9.75C8.50736 2 7.5 3.00736 7.5 4.25ZM11 9.75C11 9.33579 10.6642 9 10.25 9C9.83579 9 9.5 9.33579 9.5 9.75V17.25C9.5 17.6642 9.83579 18 10.25 18C10.6642 18 11 17.6642 11 17.25V9.75ZM14.5 9.75C14.5 9.33579 14.1642 9 13.75 9C13.3358 9 13 9.33579 13 9.75V17.25C13 17.6642 13.3358 18 13.75 18C14.1642 18 14.5 17.6642 14.5 17.25V9.75Z" fill="black"></path>
+</svg><span class="text-[#4d4f59]"><form action="{% url 'remove_from_cart' product.id %}" method="post">
+    {% csrf_token %}
+
+    <button type="submit" class="text-[#4d4f59]">
+        Yoʻq qilish
+    </button>
+</form></span></div>
+
+
+    <div class="flex pl-[30px] mt-[10px]"><span class="text-[14px] text-[#7e818c]">Sotuvchi:</span><a class="text-[14px]" href="#">"NIVEA"</a><div class="w-[127px] h-[40px] border rounded-[5px] flex pt-[7px] ml-[180px]"><div class="w-[37px] h-[37px] ml-[15px]"><i class="fa-solid fa-minus text-[#86868a]"></i></div><p>{{ product.quantity }}</p><div class="w-[37px] h-[37px] ml-[26px]"><i class="fa-solid fa-plus text-[#86868a]"></i></div></div><div class="flex"><span class="text-[20px] text-[#7f4dff] font-[600] ml-[90px]">{{ product.item.narxi }} so'm</span><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="ui-icon  actual-price__append-icon mt-[10px] ml-[6px]">
+<path d="M0.75 5.52988C0.75 4.6898 0.75 4.26976 0.91349 3.9489C1.0573 3.66665 1.28677 3.43718 1.56901 3.29337C1.88988 3.12988 2.30992 3.12988 3.15 3.12988H12.85C13.6901 3.12988 14.1101 3.12988 14.431 3.29337C14.7132 3.43718 14.9427 3.66665 15.0865 3.9489C15.25 4.26976 15.25 4.6898 15.25 5.52988V10.5199C15.25 11.36 15.25 11.78 15.0865 12.1009C14.9427 12.3831 14.7132 12.6126 14.431 12.7564C14.1101 12.9199 13.6901 12.9199 12.85 12.9199H3.15C2.30992 12.9199 1.88988 12.9199 1.56901 12.7564C1.28677 12.6126 1.0573 12.3831 0.91349 12.1009C0.75 11.78 0.75 11.36 0.75 10.5199V5.52988Z" fill="#7F4DFF"></path>
+<path d="M13.5739 3.13633C13.2608 3.22084 13.0243 3.39895 12.8851 3.63488C12.7397 3.39419 12.4729 3.21275 12.1654 3.12988H11.3676C10.752 3.28479 10.4336 3.78455 10.4336 4.37859V6.09981H11.2699V4.50086C11.2699 4.15733 11.4464 3.85615 11.852 3.85615C11.9343 3.85138 12.0178 3.8639 12.0942 3.89432C12.1717 3.92473 12.2421 3.97066 12.3006 4.0303C12.359 4.08994 12.4038 4.1615 12.4336 4.24083C12.4622 4.32015 12.4753 4.40424 12.4694 4.48833V6.1016H13.3056V4.48714C13.3056 4.14361 13.5049 3.85317 13.9057 3.85317C14.3065 3.85317 14.4998 4.15554 14.4998 4.49787V6.09682H15.2494V5.52988C15.2494 4.6898 15.2494 4.26976 15.086 3.9489C14.9421 3.66665 14.7127 3.43718 14.4304 3.29337C14.2188 3.18553 13.964 3.14882 13.5739 3.13633Z" fill="white" fill-opacity="0.9"></path>
+<path d="M0.75 5.17903C0.958129 5.87268 1.63327 6.15472 2.16529 6.15472C2.80233 6.15472 3.64335 5.74976 3.64335 4.71918V3.13693H2.8071L2.80889 4.68876C2.80889 5.15932 2.54882 5.37641 2.1641 5.37641C1.77937 5.37641 1.52229 5.16231 1.52229 4.68876V3.31792C1.26119 3.46263 1.04882 3.68221 0.912938 3.9489C0.773978 4.22162 0.753128 4.56599 0.75 5.17903Z" fill="white" fill-opacity="0.9"></path>
+<path d="M6.72774 3.13693V3.85798L5.0582 5.3794H6.82794V6.10044H3.94697V5.3794L5.61948 3.85798H4.01258V3.13693H6.72774Z" fill="white" fill-opacity="0.9"></path>
+<path d="M8.57862 5.37641C8.96632 5.37641 9.22639 5.15932 9.22639 4.68876L9.22758 3.13693H10.0638V4.71918C10.0638 5.74976 9.21684 6.15472 8.58279 6.15472C7.94874 6.15472 7.10353 5.75036 7.10353 4.71918V3.13693H7.93979V4.68876C7.93979 5.16231 8.19091 5.37641 8.57862 5.37641Z" fill="white" fill-opacity="0.9"></path>
+<path d="M13.5739 3.13633C13.2608 3.22084 13.0243 3.39895 12.8851 3.63488C12.7397 3.39419 12.4729 3.21275 12.1654 3.12988H11.3676C10.752 3.28479 10.4336 3.78455 10.4336 4.37859V6.09981H11.2699V4.50086C11.2699 4.15733 11.4464 3.85615 11.852 3.85615C11.9343 3.85138 12.0178 3.8639 12.0942 3.89432C12.1717 3.92473 12.2421 3.97066 12.3006 4.0303C12.359 4.08994 12.4038 4.1615 12.4336 4.24083C12.4622 4.32015 12.4753 4.40424 12.4694 4.48833V6.10159H13.3056V4.48714C13.3056 4.14361 13.5049 3.85317 13.9057 3.85317C14.3065 3.85317 14.4998 4.15554 14.4998 4.49787V6.09682H15.2494V5.52988C15.2494 4.6898 15.2494 4.26976 15.086 3.9489C14.9421 3.66665 14.7127 3.43718 14.4304 3.29337C14.2188 3.18553 13.964 3.14882 13.5739 3.13633Z" fill="url(#paint0_linear_14522_52105)" fill-opacity="0.6"></path>
+<path d="M0.75 5.17903C0.958129 5.87268 1.63327 6.15472 2.16529 6.15472C2.80233 6.15472 3.64335 5.74976 3.64335 4.71918V3.13693H2.8071L2.80889 4.68876C2.80889 5.15932 2.54882 5.37641 2.1641 5.37641C1.77937 5.37641 1.52229 5.16231 1.52229 4.68876V3.31792C1.26119 3.46263 1.04882 3.68221 0.912938 3.9489C0.773978 4.22162 0.753128 4.56599 0.75 5.17903Z" fill="url(#paint1_linear_14522_52105)" fill-opacity="0.6"></path>
+<path d="M6.72774 3.13693V3.85798L5.0582 5.3794H6.82794V6.10044H3.94697V5.3794L5.61948 3.85798H4.01258V3.13693H6.72774Z" fill="url(#paint2_linear_14522_52105)" fill-opacity="0.6"></path>
+<path d="M8.57862 5.37641C8.96632 5.37641 9.22639 5.15932 9.22639 4.68876L9.22758 3.13693H10.0638V4.71918C10.0638 5.74976 9.21684 6.15472 8.58279 6.15472C7.94874 6.15472 7.10353 5.75036 7.10353 4.71918V3.13693H7.93979V4.68876C7.93979 5.16231 8.19091 5.37641 8.57862 5.37641Z" fill="url(#paint3_linear_14522_52105)" fill-opacity="0.6"></path>
+<defs>
+<linearGradient id="paint0_linear_14522_52105" x1="0.320316" y1="4.6423" x2="15.2494" y2="4.64473" gradientUnits="userSpaceOnUse">
+<stop stop-color="#7000FF"></stop>
+<stop offset="0.42" stop-color="#6800EC" stop-opacity="0.6"></stop>
+<stop offset="1" stop-color="#7000FF" stop-opacity="0"></stop>
+</linearGradient>
+<linearGradient id="paint1_linear_14522_52105" x1="0.320316" y1="4.6423" x2="15.2494" y2="4.64473" gradientUnits="userSpaceOnUse">
+<stop stop-color="#7000FF"></stop>
+<stop offset="0.42" stop-color="#6800EC" stop-opacity="0.6"></stop>
+<stop offset="1" stop-color="#7000FF" stop-opacity="0"></stop>
+</linearGradient>
+<linearGradient id="paint2_linear_14522_52105" x1="0.320316" y1="4.6423" x2="15.2494" y2="4.64473" gradientUnits="userSpaceOnUse">
+<stop stop-color="#7000FF"></stop>
+<stop offset="0.42" stop-color="#6800EC" stop-opacity="0.6"></stop>
+<stop offset="1" stop-color="#7000FF" stop-opacity="0"></stop>
+</linearGradient>
+<linearGradient id="paint3_linear_14522_52105" x1="0.320316" y1="4.6423" x2="15.2494" y2="4.64473" gradientUnits="userSpaceOnUse">
+<stop stop-color="#7000FF"></stop>
+<stop offset="0.42" stop-color="#6800EC" stop-opacity="0.6"></stop>
+<stop offset="1" stop-color="#7000FF" stop-opacity="0"></stop>
+</linearGradient>
+</defs>
+</svg></div></div>
+<div><span class="text-[14px] relative ml-[520px] top-[-10px]">Uzum kartasiz {{ product.item.narxi }}</span></div>
+</div>
+</div>
+
+<div class="flex w-[800px] h-[52px] rounded-[20px] bg-[#f0f2f5] mt-[30px] mb-[10px] ">
+    <div class="flex pl-[17px] pt-[12px]">
+    <img class="w-[30px] h-[30px] rounded-[10px]" src="https://uzum.uz/static/img/main/img_back.png" alt="">
+    <img class="w-[30px] h-[30px] rounded-[10px] relative ml-[-15px]" src="https://uzum.uz/static/img/main/img_front.png" alt="">
+    </div>
+    <div class="ml-[10px]">
+        <span class="text-[16px] relative top-[2px]">Kerak bo‘lib qolishi mumkin</span>
+        <div><span class="text-[12px] text-[#8b8e99] relative top-[-3px]">Siz uchun tovarlar to‘plami</span></div>
+    </div>
+    <i class="fa-solid fa-angle-right mt-[20px] text-[#a0a2a7] ml-[490px]"></i>
+</div>
+</div>
+{% endfor %}
+</div>
+<div class="ml-[11px]">
+    <div class="w-[360px] h-[61px] border rounded-[10px] pl-[20px] pt-[5px]"><span class="text-[14px] mr-[110px]">Yana 36 010 so‘m va yetkazish 3000 so‘m bo‘ladi</span><i class="fa-solid fa-angle-right relative ml-[148px] top-[-10px]"></i></div>
+    <div class="w-[360px] h-[279px] rounded-[10px] border mt-[16px] pl-[20px] pt-[20px]">
+        <span class="text-[16px] font-[600]">Buyurtmangiz</span>
+        <div class="flex mt-[20px]"><div class="text-[14px] w-[251px] h-[24px]">Mahsulotlar (1):</div><span class="text-[14px]">43 990 so'm</span></div>
+        <div class="text-[16px] font-[600] w-[326px] h-[20px] mt-[5px]">Jami</div>
+        <div class="flex mt-[10px]"><div class="text-[14px]">Uzum karta bilan</div><span class="text-[20px] font-[600] text-[#7f4dff] ml-[120px]">32 630 so'm</span></div>
+        <div class="text-[14px] text-[#00ad3a]  w-[326px] h-[18px] ml-[190px]">Tejovingiz: 11 360 so'm</div>
+        <div class="flex mt-[5px]"><div class="14px">Uzum kartasiz</div><span class="text-[14px] ml-[160px]">33 990 so'm</span></div>
+        <button class="mt-[14px] w-[326px] h-[44px] bg-[#7000ff] rounded-[10px] text-[#fff] "><div class="w-[191px] h-[44px] text-[16px] font-[600] pt-[10px] m-auto">Rasmiylashtirishga oʻtish</div></button>
+    </div>
+</div>
+</div>
+
+</div>
+{% endblock %}

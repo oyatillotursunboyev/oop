@@ -1,0 +1,105 @@
+msgid ""
+msgstr ""
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-06-08 15:14+0500\n"
+"Language: uz\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+
+#: .\Base\templates\navigation.html:9
+msgid "Home"
+msgstr "Bosh sahifa"
+
+#: .\Base\templates\navigation.html:30
+msgid "Toshkent"
+msgstr "Toshkent"
+
+#: .\Base\templates\navigation.html:40
+msgid "Topshirish punkitlari"
+msgstr "Topshirish punktlari"
+
+#: .\Base\templates\navigation.html:45
+#, fuzzy
+#| msgid "Sotuvchi bo'lish"
+msgid "Sotuvchi bo\\"
+msgstr "Sotuvchi bo‘lish"
+
+#: .\Base\templates\navigation.html:47
+msgid "Topshirish punkitini ochish"
+msgstr "Topshirish punktini ochish"
+
+#: .\Base\templates\navigation.html:50
+msgid "Savol-javob"
+msgstr "Savol-javob"
+
+#: .\Base\templates\navigation.html:51
+msgid "Buyurtmalarim"
+msgstr "Buyurtmalarim"
+
+#: .\Base\templates\navigation.html:79
+#, fuzzy
+#| msgid "savollar yuborish"
+msgid "Savollar yuborish"
+msgstr "Savollar yuborish"
+
+#: .\Base\templates\navigation.html:79
+msgid "uchun"
+msgstr "uchun"
+
+#: .\Base\templates\navigation.html:159
+msgid "Katalog"
+msgstr "Katalog"
+
+#: .\Base\templates\navigation.html:172
+msgid "Mahsulotlar va turkumlarni izlash"
+msgstr "Mahsulotlar va turkumlarni izlash"
+
+#: .\Base\templates\navigation.html:206
+msgid "Kirish"
+msgstr "Kirish"
+
+#: .\Base\templates\navigation.html:224
+msgid "Saralangan"
+msgstr "Saralangan"
+
+#: .\Base\templates\navigation.html:244
+msgid "Savat"
+msgstr "Savat"
+
+#: .\Base\templates\navigation.html:256
+msgid "Hafta tovarlari"
+msgstr "Hafta tovarlari"
+
+#: .\Base\templates\navigation.html:260
+msgid "Bahorgi kolleksiya"
+msgstr "Bahorgi kolleksiya"
+
+#: .\Base\templates\navigation.html:264
+msgid "Xobbi va ijod"
+msgstr "Xobbi va ijod"
+
+#: .\Base\templates\navigation.html:268
+msgid "Smartfonlar"
+msgstr "Smartfonlar"
+
+#: .\Base\templates\navigation.html:273
+msgid "Bahor yarmarkasi"
+msgstr "Bahor yarmarkasi"
+
+#: .\Base\templates\navigation.html:275
+msgid "Mebel"
+msgstr "Mebel"
+
+#: .\Base\templates\navigation.html:276
+msgid "Turizm, baliq ovi va ovchilik"
+msgstr "Turizm, baliq ovi va ovchilik"
+
+#: .\Base\templates\navigation.html:277
+msgid "Elektronika"
+msgstr "Elektronika"
+
+#: .\Base\templates\navigation.html:279
+msgid "Yana"
+msgstr "Yana"
+
+#~ msgid "yetkazib beriladigon shahar"
+#~ msgstr "Yetkazib beriladigan shahar"
